@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\soporte\\Documents\\DOCSMARCELA\\ING. SISTEMAS\\CICLO 1 - 2024\\PROG1-I\\PROYECTO\\SISBARBERIA\\CapaNegocio\\CapaNegocio.csproj": {}
+    "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaNegocio\\CapaNegocio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\soporte\\Documents\\DOCSMARCELA\\ING. SISTEMAS\\CICLO 1 - 2024\\PROG1-I\\PROYECTO\\SISBARBERIA\\CapaNegocio\\CapaNegocio.csproj": {
+    "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaNegocio\\CapaNegocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\soporte\\Documents\\DOCSMARCELA\\ING. SISTEMAS\\CICLO 1 - 2024\\PROG1-I\\PROYECTO\\SISBARBERIA\\CapaNegocio\\CapaNegocio.csproj",
+        "projectUniqueName": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaNegocio\\CapaNegocio.csproj",
         "projectName": "CapaNegocio",
-        "projectPath": "C:\\Users\\soporte\\Documents\\DOCSMARCELA\\ING. SISTEMAS\\CICLO 1 - 2024\\PROG1-I\\PROYECTO\\SISBARBERIA\\CapaNegocio\\CapaNegocio.csproj",
-        "packagesPath": "C:\\Users\\soporte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\soporte\\Documents\\DOCSMARCELA\\ING. SISTEMAS\\CICLO 1 - 2024\\PROG1-I\\PROYECTO\\SISBARBERIA\\CapaNegocio\\obj\\",
+        "projectPath": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaNegocio\\CapaNegocio.csproj",
+        "packagesPath": "C:\\Users\\PROMETEUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaNegocio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\soporte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PROMETEUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -55,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,67 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\SISBARBERIA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{82E69726-3F48-4AA4-8884-D89DEC5F3E51}|..\\CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\capapresentacion\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82E69726-3F48-4AA4-8884-D89DEC5F3E51}|..\\CapaPresentacion\\CapaPresentacion.csproj|C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\capapresentacion\\frmmenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82E69726-3F48-4AA4-8884-D89DEC5F3E51}|..\\CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\prometeus\\documents\\visual studio 2022\\c#\\sis.barberia\\capapresentacion\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMenu.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaPresentacion\\frmMenu.Designer.cs",
+              "RelativeDocumentMoniker": "..\\CapaPresentacion\\frmMenu.Designer.cs",
+              "ToolTip": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaPresentacion\\frmMenu.Designer.cs",
+              "RelativeToolTip": "..\\CapaPresentacion\\frmMenu.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T03:00:30.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmMenu.cs",
+              "DocumentMoniker": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaPresentacion\\frmMenu.cs",
+              "RelativeDocumentMoniker": "..\\CapaPresentacion\\frmMenu.cs",
+              "ToolTip": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaPresentacion\\frmMenu.cs",
+              "RelativeToolTip": "..\\CapaPresentacion\\frmMenu.cs",
+              "ViewState": "AQIAAI0AAAAAAAAAAIAwwJoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T03:00:30.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmMenu.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaPresentacion\\frmMenu.cs",
+              "RelativeDocumentMoniker": "..\\CapaPresentacion\\frmMenu.cs",
+              "ToolTip": "C:\\Users\\PROMETEUS\\Documents\\Visual Studio 2022\\c#\\SIS.BARBERIA\\CapaPresentacion\\frmMenu.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\CapaPresentacion\\frmMenu.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-10T03:00:32.592Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
