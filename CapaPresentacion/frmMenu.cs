@@ -128,7 +128,7 @@ namespace CapaPresentacion
         private void btnVenta_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            OpenForm(new frmVenta());
+            OpenForm(new frmMovimiento());
 
         }
 

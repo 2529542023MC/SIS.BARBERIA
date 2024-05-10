@@ -27,6 +27,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `cliente`
 --
 
+USE sistema_barberia;
+
 CREATE TABLE `cliente` (
   `Id_Cliente` int(11) NOT NULL,
   `Cliente` varchar(50) NOT NULL,
@@ -286,7 +288,43 @@ ALTER TABLE `movimiento_producto`
 ALTER TABLE `sucursal_producto`
   ADD CONSTRAINT `sucursal_producto_ibfk_1` FOREIGN KEY (`Id_Sucursal`) REFERENCES `sucursal` (`Id_Sucursal`),
   ADD CONSTRAINT `sucursal_producto_ibfk_2` FOREIGN KEY (`Id_Producto`) REFERENCES `producto` (`Id_Producto`);
-COMMIT;
+COMMIT; 
+
+INSERT INTO `cliente` (`Id_Cliente`, `Cliente`, `Telefono`, `Correo`, `Deleted_at`) VALUES
+(1, 'Juan Perez', '123456789', 'juan@example.com', NULL),
+(2, 'Maria Lopez', '987654321', 'maria@example.com', NULL),
+(3, 'Carlos Sanchez', '555555555', 'carlos@example.com', NULL);
+
+INSERT INTO `rol` (`Id_Rol`, `Nombre`, `Descripcion`, `Deleted_at`) VALUES
+(1, 'Administrador', 'Rol con privilegios administrativos', NULL),
+(2, 'Vendedor', 'Rol para realizar ventas', NULL);
+
+INSERT INTO `sucursal` (`Id_Sucursal`, `Sucursal`, `Direccion`, `Deleted_at`) VALUES
+(1, 'Sucursal Principal', 'Calle Principal #456', NULL),
+(2, 'Sucursal Secundaria', 'Avenida Central #789', NULL);
+
+INSERT INTO `empleado` (`Id_Empleado`, `Nombre`, `Apellido`, `Telefono`, `Correo`, `Direccion`, `Dui`, `Contraseña`, `Estado`, `Id_Rol`, `Id_Sucursal`, `Deleted_at`) VALUES
+(1, 'Pedro', 'Gomez', '111111111', 'pedro@example.com', 'Calle Principal #123', '12345678-9', 'password123', 'Activo', 1, 1, NULL),
+(2, 'Ana', 'Martinez', '222222222', 'ana@example.com', 'Avenida Central #456', '98765432-1', 'abc123', 'Activo', 2, 2, NULL);
+
+INSERT INTO `movimiento` (`Id_Movimiento`, `Precio_Total`, `Cantidad_Total`, `Observacion`, `Tipo_Movimiento`, `Usuario`, `Id_Cliente`, `Deleted_at`) VALUES
+(1, 100.00, 5, 'Venta de productos', 'Venta', 'Pedro', 1, NULL),
+(2, 50.00, 2, 'Compra de insumos', 'Compra', 'Ana', NULL, NULL);
+
+INSERT INTO `producto` (`Id_Producto`, `Producto`, `Descripcion`, `Precio`, `Tipo`, `Deleted_at`) VALUES
+(1, 'Producto A', 'Descripción del Producto A', 25.00, 1, NULL),
+(2, 'Producto B', 'Descripción del Producto B', 15.00, 2, NULL),
+(3, 'Producto C', 'Descripción del Producto C', 30.00, 1, NULL);
+
+INSERT INTO `sucursal_producto` (`Id_Sucursal_Producto`, `Stock`, `Stock_Min`, `Id_Sucursal`, `Id_Producto`, `Deleted_at`) VALUES
+(1, 50, 10, 1, 1, NULL),
+(2, 30, 5, 2, 2, NULL),
+(3, 20, 8, 1, 3, NULL);
+
+INSERT INTO `movimiento_producto` (`Id_Movimiento_Producto`, `Precio`, `Cantidad`, `SubTotal`, `Id_Sucursal_Producto`, `Id_Movimiento`, `Deleted_at`) VALUES
+(1, 20.00, 3, 60.00, 1, 1, NULL),
+(2, 10.00, 2, 20.00, 2, 1, NULL),
+(3, 25.00, 2, 50.00, 3, 1, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
