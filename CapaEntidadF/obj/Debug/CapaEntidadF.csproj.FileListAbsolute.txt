@@ -1,0 +1,6 @@
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaEntidadF\bin\Debug\CapaEntidadF.dll
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaEntidadF\bin\Debug\CapaEntidadF.pdb
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaEntidadF\obj\Debug\CapaEntidadF.csproj.AssemblyReference.cache
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaEntidadF\obj\Debug\CapaEntidadF.csproj.CoreCompileInputs.cache
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaEntidadF\obj\Debug\CapaEntidadF.dll
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaEntidadF\obj\Debug\CapaEntidadF.pdb

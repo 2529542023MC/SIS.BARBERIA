@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 08, 2024 at 03:34 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 14-05-2024 a las 23:42:57
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,16 +18,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sistema_barberia`
+-- Base de datos: `sistema_barberia`
 --
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_buscar_cliente` (IN `p_Cliente` VARCHAR(50))   BEGIN
+    SELECT Id_Cliente, Cliente, Telefono, Correo
+    FROM cliente
+    WHERE Cliente LIKE CONCAT('%', p_Cliente, '%') AND Deleted_at IS NULL;
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cliente`
+-- Estructura de tabla para la tabla `cliente`
 --
-
-USE sistema_barberia;
 
 CREATE TABLE `cliente` (
   `Id_Cliente` int(11) NOT NULL,
@@ -37,10 +47,27 @@ CREATE TABLE `cliente` (
   `Deleted_at` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`Id_Cliente`, `Cliente`, `Telefono`, `Correo`, `Deleted_at`) VALUES
+(1, 'Juan Perez', '1234-5678', 'juan@gmail.com', NULL),
+(2, 'Maria Lopez', '9876-5432', 'maria@gmail.com', NULL),
+(3, 'Carlos Sanchez', '2525-2525', 'carlos@example.com', NULL),
+(4, 'Marcela Calero', '6929-7014', 'mcalero@gmail.com', NULL),
+(5, 'Kevin Flores', '7842-0887', 'kflores@gmail.com', NULL),
+(6, 'Prueba', '4755-6626', 'prueba@j.com', '2024-05-14 14:56:09.872689'),
+(7, 'Sara Gómez', '7859-6215', 'sgomez@gmail.com', NULL),
+(8, '', '    -', '', '2024-05-14 15:24:41.997453'),
+(9, '', '    -', '', '2024-05-14 15:33:29.020081'),
+(10, 'Sabrina Carpenter', '7845-3232', 'sab@gmail.com', NULL),
+(11, 'Prueba', '7846-5923', 'preuba@j.com', '2024-05-14 15:40:07.988853');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `empleado`
+-- Estructura de tabla para la tabla `empleado`
 --
 
 CREATE TABLE `empleado` (
@@ -58,10 +85,18 @@ CREATE TABLE `empleado` (
   `Deleted_at` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `empleado`
+--
+
+INSERT INTO `empleado` (`Id_Empleado`, `Nombre`, `Apellido`, `Telefono`, `Correo`, `Direccion`, `Dui`, `Contraseña`, `Estado`, `Id_Rol`, `Id_Sucursal`, `Deleted_at`) VALUES
+(1, 'Pedro', 'Gomez', '111111111', 'pedro@example.com', 'Calle Principal #123', '12345678-9', 'password123', 'Activo', 1, 1, NULL),
+(2, 'Ana', 'Martinez', '222222222', 'ana@example.com', 'Avenida Central #456', '98765432-1', 'abc123', 'Activo', 2, 2, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `movimiento`
+-- Estructura de tabla para la tabla `movimiento`
 --
 
 CREATE TABLE `movimiento` (
@@ -75,10 +110,18 @@ CREATE TABLE `movimiento` (
   `Deleted_at` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `movimiento`
+--
+
+INSERT INTO `movimiento` (`Id_Movimiento`, `Precio_Total`, `Cantidad_Total`, `Observacion`, `Tipo_Movimiento`, `Usuario`, `Id_Cliente`, `Deleted_at`) VALUES
+(1, '100.00', 5, 'Venta de productos', 'Venta', 'Pedro', 1, NULL),
+(2, '50.00', 2, 'Compra de insumos', 'Compra', 'Ana', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `movimiento_producto`
+-- Estructura de tabla para la tabla `movimiento_producto`
 --
 
 CREATE TABLE `movimiento_producto` (
@@ -91,10 +134,19 @@ CREATE TABLE `movimiento_producto` (
   `Deleted_at` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `movimiento_producto`
+--
+
+INSERT INTO `movimiento_producto` (`Id_Movimiento_Producto`, `Precio`, `Cantidad`, `SubTotal`, `Id_Sucursal_Producto`, `Id_Movimiento`, `Deleted_at`) VALUES
+(1, '20.00', 3, '60.00', 1, 1, NULL),
+(2, '10.00', 2, '20.00', 2, 1, NULL),
+(3, '25.00', 2, '50.00', 3, 1, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `producto`
+-- Estructura de tabla para la tabla `producto`
 --
 
 CREATE TABLE `producto` (
@@ -106,10 +158,19 @@ CREATE TABLE `producto` (
   `Deleted_at` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`Id_Producto`, `Producto`, `Descripcion`, `Precio`, `Tipo`, `Deleted_at`) VALUES
+(1, 'Producto A', 'Descripción del Producto A', '25.00', 1, NULL),
+(2, 'Producto B', 'Descripción del Producto B', '15.00', 2, NULL),
+(3, 'Producto C', 'Descripción del Producto C', '30.00', 1, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rol`
+-- Estructura de tabla para la tabla `rol`
 --
 
 CREATE TABLE `rol` (
@@ -119,10 +180,18 @@ CREATE TABLE `rol` (
   `Deleted_at` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `rol`
+--
+
+INSERT INTO `rol` (`Id_Rol`, `Nombre`, `Descripcion`, `Deleted_at`) VALUES
+(1, 'Administrador', 'Rol con privilegios administrativos', NULL),
+(2, 'Vendedor', 'Rol para realizar ventas', NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sucursal`
+-- Estructura de tabla para la tabla `sucursal`
 --
 
 CREATE TABLE `sucursal` (
@@ -132,10 +201,18 @@ CREATE TABLE `sucursal` (
   `Deleted_at` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `sucursal`
+--
+
+INSERT INTO `sucursal` (`Id_Sucursal`, `Sucursal`, `Direccion`, `Deleted_at`) VALUES
+(1, 'Sucursal Principal', 'Calle Principal #456', NULL),
+(2, 'Sucursal Secundaria', 'Avenida Central #789', NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sucursal_producto`
+-- Estructura de tabla para la tabla `sucursal_producto`
 --
 
 CREATE TABLE `sucursal_producto` (
@@ -148,17 +225,26 @@ CREATE TABLE `sucursal_producto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Volcado de datos para la tabla `sucursal_producto`
+--
+
+INSERT INTO `sucursal_producto` (`Id_Sucursal_Producto`, `Stock`, `Stock_Min`, `Id_Sucursal`, `Id_Producto`, `Deleted_at`) VALUES
+(1, 50, 10, 1, 1, NULL),
+(2, 30, 5, 2, 2, NULL),
+(3, 20, 8, 1, 3, NULL);
+
+--
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `cliente`
+-- Indices de la tabla `cliente`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`Id_Cliente`);
 
 --
--- Indexes for table `empleado`
+-- Indices de la tabla `empleado`
 --
 ALTER TABLE `empleado`
   ADD PRIMARY KEY (`Id_Empleado`),
@@ -166,14 +252,14 @@ ALTER TABLE `empleado`
   ADD KEY `Id_Sucursal` (`Id_Sucursal`);
 
 --
--- Indexes for table `movimiento`
+-- Indices de la tabla `movimiento`
 --
 ALTER TABLE `movimiento`
   ADD PRIMARY KEY (`Id_Movimiento`),
   ADD KEY `Id_Cliente` (`Id_Cliente`);
 
 --
--- Indexes for table `movimiento_producto`
+-- Indices de la tabla `movimiento_producto`
 --
 ALTER TABLE `movimiento_producto`
   ADD PRIMARY KEY (`Id_Movimiento_Producto`),
@@ -181,25 +267,25 @@ ALTER TABLE `movimiento_producto`
   ADD KEY `Id_Movimiento` (`Id_Movimiento`);
 
 --
--- Indexes for table `producto`
+-- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`Id_Producto`);
 
 --
--- Indexes for table `rol`
+-- Indices de la tabla `rol`
 --
 ALTER TABLE `rol`
   ADD PRIMARY KEY (`Id_Rol`);
 
 --
--- Indexes for table `sucursal`
+-- Indices de la tabla `sucursal`
 --
 ALTER TABLE `sucursal`
   ADD PRIMARY KEY (`Id_Sucursal`);
 
 --
--- Indexes for table `sucursal_producto`
+-- Indices de la tabla `sucursal_producto`
 --
 ALTER TABLE `sucursal_producto`
   ADD PRIMARY KEY (`Id_Sucursal_Producto`),
@@ -207,124 +293,88 @@ ALTER TABLE `sucursal_producto`
   ADD KEY `Id_Producto` (`Id_Producto`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `cliente`
+-- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `Id_Cliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `empleado`
+-- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `Id_Empleado` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Empleado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `movimiento`
+-- AUTO_INCREMENT de la tabla `movimiento`
 --
 ALTER TABLE `movimiento`
-  MODIFY `Id_Movimiento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Movimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `movimiento_producto`
+-- AUTO_INCREMENT de la tabla `movimiento_producto`
 --
 ALTER TABLE `movimiento_producto`
-  MODIFY `Id_Movimiento_Producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Movimiento_Producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `producto`
+-- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `Id_Producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `rol`
+-- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `Id_Rol` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Rol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `sucursal`
+-- AUTO_INCREMENT de la tabla `sucursal`
 --
 ALTER TABLE `sucursal`
-  MODIFY `Id_Sucursal` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Sucursal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `sucursal_producto`
+-- AUTO_INCREMENT de la tabla `sucursal_producto`
 --
 ALTER TABLE `sucursal_producto`
-  MODIFY `Id_Sucursal_Producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id_Sucursal_Producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `empleado`
+-- Filtros para la tabla `empleado`
 --
 ALTER TABLE `empleado`
   ADD CONSTRAINT `empleado_ibfk_1` FOREIGN KEY (`Id_Rol`) REFERENCES `rol` (`Id_Rol`),
   ADD CONSTRAINT `empleado_ibfk_2` FOREIGN KEY (`Id_Sucursal`) REFERENCES `sucursal` (`Id_Sucursal`);
 
 --
--- Constraints for table `movimiento`
+-- Filtros para la tabla `movimiento`
 --
 ALTER TABLE `movimiento`
   ADD CONSTRAINT `movimiento_ibfk_1` FOREIGN KEY (`Id_Cliente`) REFERENCES `cliente` (`Id_Cliente`);
 
 --
--- Constraints for table `movimiento_producto`
+-- Filtros para la tabla `movimiento_producto`
 --
 ALTER TABLE `movimiento_producto`
   ADD CONSTRAINT `movimiento_producto_ibfk_1` FOREIGN KEY (`Id_Sucursal_Producto`) REFERENCES `sucursal_producto` (`Id_Sucursal_Producto`),
   ADD CONSTRAINT `movimiento_producto_ibfk_2` FOREIGN KEY (`Id_Movimiento`) REFERENCES `movimiento` (`Id_Movimiento`);
 
 --
--- Constraints for table `sucursal_producto`
+-- Filtros para la tabla `sucursal_producto`
 --
 ALTER TABLE `sucursal_producto`
   ADD CONSTRAINT `sucursal_producto_ibfk_1` FOREIGN KEY (`Id_Sucursal`) REFERENCES `sucursal` (`Id_Sucursal`),
   ADD CONSTRAINT `sucursal_producto_ibfk_2` FOREIGN KEY (`Id_Producto`) REFERENCES `producto` (`Id_Producto`);
-COMMIT; 
-
-INSERT INTO `cliente` (`Id_Cliente`, `Cliente`, `Telefono`, `Correo`, `Deleted_at`) VALUES
-(1, 'Juan Perez', '123456789', 'juan@example.com', NULL),
-(2, 'Maria Lopez', '987654321', 'maria@example.com', NULL),
-(3, 'Carlos Sanchez', '555555555', 'carlos@example.com', NULL);
-
-INSERT INTO `rol` (`Id_Rol`, `Nombre`, `Descripcion`, `Deleted_at`) VALUES
-(1, 'Administrador', 'Rol con privilegios administrativos', NULL),
-(2, 'Vendedor', 'Rol para realizar ventas', NULL);
-
-INSERT INTO `sucursal` (`Id_Sucursal`, `Sucursal`, `Direccion`, `Deleted_at`) VALUES
-(1, 'Sucursal Principal', 'Calle Principal #456', NULL),
-(2, 'Sucursal Secundaria', 'Avenida Central #789', NULL);
-
-INSERT INTO `empleado` (`Id_Empleado`, `Nombre`, `Apellido`, `Telefono`, `Correo`, `Direccion`, `Dui`, `Contraseña`, `Estado`, `Id_Rol`, `Id_Sucursal`, `Deleted_at`) VALUES
-(1, 'Pedro', 'Gomez', '111111111', 'pedro@example.com', 'Calle Principal #123', '12345678-9', 'password123', 'Activo', 1, 1, NULL),
-(2, 'Ana', 'Martinez', '222222222', 'ana@example.com', 'Avenida Central #456', '98765432-1', 'abc123', 'Activo', 2, 2, NULL);
-
-INSERT INTO `movimiento` (`Id_Movimiento`, `Precio_Total`, `Cantidad_Total`, `Observacion`, `Tipo_Movimiento`, `Usuario`, `Id_Cliente`, `Deleted_at`) VALUES
-(1, 100.00, 5, 'Venta de productos', 'Venta', 'Pedro', 1, NULL),
-(2, 50.00, 2, 'Compra de insumos', 'Compra', 'Ana', NULL, NULL);
-
-INSERT INTO `producto` (`Id_Producto`, `Producto`, `Descripcion`, `Precio`, `Tipo`, `Deleted_at`) VALUES
-(1, 'Producto A', 'Descripción del Producto A', 25.00, 1, NULL),
-(2, 'Producto B', 'Descripción del Producto B', 15.00, 2, NULL),
-(3, 'Producto C', 'Descripción del Producto C', 30.00, 1, NULL);
-
-INSERT INTO `sucursal_producto` (`Id_Sucursal_Producto`, `Stock`, `Stock_Min`, `Id_Sucursal`, `Id_Producto`, `Deleted_at`) VALUES
-(1, 50, 10, 1, 1, NULL),
-(2, 30, 5, 2, 2, NULL),
-(3, 20, 8, 1, 3, NULL);
-
-INSERT INTO `movimiento_producto` (`Id_Movimiento_Producto`, `Precio`, `Cantidad`, `SubTotal`, `Id_Sucursal_Producto`, `Id_Movimiento`, `Deleted_at`) VALUES
-(1, 20.00, 3, 60.00, 1, 1, NULL),
-(2, 10.00, 2, 20.00, 2, 1, NULL),
-(3, 25.00, 2, 50.00, 3, 1, NULL);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

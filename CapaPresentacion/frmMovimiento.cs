@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using MySql.Data.MySqlClient;
+using CapaEntidadF;
+using CapaNegocioF;
 
 namespace CapaPresentacion
 {
@@ -22,22 +24,7 @@ namespace CapaPresentacion
         }
 
         private void frmVenta_Load(object sender, EventArgs e) {
-            string querySelect = "SELECT Cliente FROM cliente";
-
-            //Conexion para traer las marcas
-            MySqlCommand comando = new MySqlCommand(querySelect, Conexion.prepareConnection());
-
-            //Manda a ejecutar el query
-            MySqlDataReader lector = comando.ExecuteReader();
-
-            while (lector.Read())
-            {
-                //Agrega lo que trae la consulta al combobox
-                cmbCliente.Items.Add(lector.GetString(0));
-            }
+           
         }
-
-       
-
     }
 }

@@ -149,6 +149,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +193,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidadF\CapaEntidadF.csproj">
+      <Project>{8c8e2855-4e00-48fe-a53a-c33165992523}</Project>
+      <Name>CapaEntidadF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocioF\CapaNegocioF.csproj">
+      <Project>{4ece5fb2-3ef7-405c-bce2-6148f8ab4cfd}</Project>
+      <Name>CapaNegocioF</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

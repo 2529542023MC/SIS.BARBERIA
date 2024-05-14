@@ -47,3 +47,10 @@ C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROY
 C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\obj\Debug\CapaPresentacion.frmMovimiento.resources
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\CapaEntidadF.dll
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\CapaNegocioF.dll
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\CapaDatosF.dll
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\CapaEntidadF.pdb
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\CapaNegocioF.pdb
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\CapaDatosF.pdb
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SISBARBERIA\CapaPresentacion\bin\Debug\CapaDatosF.dll.config
