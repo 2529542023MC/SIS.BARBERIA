@@ -83,7 +83,6 @@
             this.txtTelefono.Size = new System.Drawing.Size(153, 26);
             this.txtTelefono.TabIndex = 5;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
-            this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave);
             // 
             // txtCorreo
             // 
