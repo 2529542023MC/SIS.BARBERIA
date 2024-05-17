@@ -95,6 +95,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="dCliente.cs" />
+    <Compile Include="dMovimiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

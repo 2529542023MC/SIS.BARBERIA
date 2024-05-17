@@ -63,7 +63,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(159, 481);
+            this.panelMenu.Size = new System.Drawing.Size(159, 661);
             this.panelMenu.TabIndex = 0;
             // 
             // btnCliente
@@ -231,7 +231,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(159, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 27);
+            this.panel1.Size = new System.Drawing.Size(934, 27);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -245,7 +245,7 @@
             this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 15;
-            this.btnMin.Location = new System.Drawing.Point(720, 0);
+            this.btnMin.Location = new System.Drawing.Point(847, 0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(33, 24);
             this.btnMin.TabIndex = 4;
@@ -262,7 +262,7 @@
             this.btnMax.IconColor = System.Drawing.Color.White;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMax.IconSize = 15;
-            this.btnMax.Location = new System.Drawing.Point(746, 0);
+            this.btnMax.Location = new System.Drawing.Point(873, 0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(33, 24);
             this.btnMax.TabIndex = 3;
@@ -279,7 +279,7 @@
             this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExit.IconSize = 10;
-            this.btnExit.Location = new System.Drawing.Point(774, 0);
+            this.btnExit.Location = new System.Drawing.Point(901, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(33, 24);
             this.btnExit.TabIndex = 2;
@@ -292,7 +292,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(159, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(807, 10);
+            this.panel2.Size = new System.Drawing.Size(934, 10);
             this.panel2.TabIndex = 2;
             // 
             // panelEscritorio
@@ -301,14 +301,14 @@
             this.panelEscritorio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEscritorio.Location = new System.Drawing.Point(159, 37);
             this.panelEscritorio.Name = "panelEscritorio";
-            this.panelEscritorio.Size = new System.Drawing.Size(807, 444);
+            this.panelEscritorio.Size = new System.Drawing.Size(934, 624);
             this.panelEscritorio.TabIndex = 3;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 481);
+            this.ClientSize = new System.Drawing.Size(1093, 661);
             this.Controls.Add(this.panelEscritorio);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
