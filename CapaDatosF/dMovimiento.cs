@@ -191,7 +191,7 @@ namespace CapaDatosF
                     command.ExecuteNonQuery();
                     connection.Close();
 
-                    string mensaje = "Producto vendido";
+                    string mensaje = "Productos vendidos";
                     return mensaje;
                 }
             }
