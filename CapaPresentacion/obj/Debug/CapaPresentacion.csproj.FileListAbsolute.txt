@@ -110,3 +110,6 @@ C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROY
 C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SIS.BARBERIA\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SIS.BARBERIA\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SIS.BARBERIA\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SIS.BARBERIA\CapaPresentacion\obj\Debug\CapaPresentacion.frmLogin.resources
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SIS.BARBERIA\CapaPresentacion\obj\Debug\CapaPresentacion.InsertarUsuario.resources
+C:\Users\soporte\Documents\DOCSMARCELA\ING. SISTEMAS\CICLO 1 - 2024\PROG1-I\PROYECTO\SIS.BARBERIA\CapaPresentacion\obj\Debug\CapaPresentacion.ModificarCiente.resources
