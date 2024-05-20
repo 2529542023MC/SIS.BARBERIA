@@ -61,7 +61,7 @@ namespace CapaPresentacion
             txtCantidadT.Text = "";
             txtTotal.Text = "";
             dgvProd.DataSource = nMovimiento.listarProductos(sucursal);
-            dgvMov.DataSource = "";
+            dgvMov.Rows.Clear();
         }
 
 

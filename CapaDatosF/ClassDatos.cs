@@ -59,7 +59,6 @@ namespace CapaDatosF
 
                 try
                 {
-                    connection.Open();
                     da.Fill(dt);  // Llena el DataTable con la sucursal buscada
                 }
                 catch (Exception ex)

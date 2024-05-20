@@ -93,7 +93,7 @@ namespace CapaPresentacion
                 txtDireccion.Text = "";
                 txtBuscar.Text = "";
                 dgvSucursales.DataSource = objneg.N_mostrar_sucursal();
-                dgvProductos.DataSource = "";
+                dgvProductos.Rows.Clear();
             }
             catch (Exception ex)
             {
