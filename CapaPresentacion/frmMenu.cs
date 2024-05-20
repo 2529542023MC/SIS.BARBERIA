@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
 using FontAwesome.Sharp;
+using CapaPresentacion;
 
 namespace CapaPresentacion
 {
@@ -114,7 +115,7 @@ namespace CapaPresentacion
         private void btnSucursal_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
-            OpenForm(new frmSucursal());
+            OpenForm(new Form1());
 
         }
 

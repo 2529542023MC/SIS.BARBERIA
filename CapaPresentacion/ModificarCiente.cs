@@ -1,7 +1,6 @@
 ﻿using CapaEntidadF;
 using CapaNegocioF;
 //using CapaDatosF;
-using CapaEntidadF;
 using MySql.Data.MySqlClient;
 using System;
 using MySql.Data;

@@ -43,6 +43,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpProducto = new System.Windows.Forms.GroupBox();
             this.dgvMov = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAnadir = new FontAwesome.Sharp.IconButton();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -59,11 +64,6 @@
             this.dgvProd = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupMov.SuspendLayout();
             this.grpProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMov)).BeginInit();
@@ -85,6 +85,7 @@
             this.groupMov.Controls.Add(this.label2);
             this.groupMov.Controls.Add(this.label1);
             this.groupMov.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupMov.ForeColor = System.Drawing.SystemColors.Control;
             this.groupMov.Location = new System.Drawing.Point(22, 21);
             this.groupMov.Name = "groupMov";
             this.groupMov.Size = new System.Drawing.Size(596, 221);
@@ -216,12 +217,12 @@
             this.grpProducto.Controls.Add(this.label4);
             this.grpProducto.Controls.Add(this.dgvProd);
             this.grpProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grpProducto.Location = new System.Drawing.Point(22, 248);
             this.grpProducto.Name = "grpProducto";
             this.grpProducto.Size = new System.Drawing.Size(833, 369);
             this.grpProducto.TabIndex = 1;
             this.grpProducto.TabStop = false;
-            this.grpProducto.Text = "Productos";
             // 
             // dgvMov
             // 
@@ -239,6 +240,37 @@
             this.dgvMov.ReadOnly = true;
             this.dgvMov.Size = new System.Drawing.Size(412, 178);
             this.dgvMov.TabIndex = 23;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 50;
+            // 
+            // prod
+            // 
+            this.prod.HeaderText = "Producto";
+            this.prod.Name = "prod";
+            this.prod.ReadOnly = true;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "Subtotal";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
             // 
             // btnAnadir
             // 
@@ -265,6 +297,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label12.Location = new System.Drawing.Point(624, 107);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(73, 20);
@@ -282,6 +315,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(670, 27);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 20);
@@ -300,6 +334,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Location = new System.Drawing.Point(385, 107);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(92, 20);
@@ -317,6 +352,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(478, 27);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 20);
@@ -334,6 +370,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(385, 27);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(23, 20);
@@ -351,6 +388,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(17, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 20);
@@ -389,41 +427,11 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 50;
-            // 
-            // prod
-            // 
-            this.prod.HeaderText = "Producto";
-            this.prod.Name = "prod";
-            this.prod.ReadOnly = true;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            // 
-            // subtotal
-            // 
-            this.subtotal.HeaderText = "Subtotal";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            // 
             // frmMovimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(87)))));
             this.ClientSize = new System.Drawing.Size(887, 629);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAgregar);

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnCliente = new FontAwesome.Sharp.IconButton();
-            this.btnReporte = new FontAwesome.Sharp.IconButton();
             this.btnVenta = new FontAwesome.Sharp.IconButton();
             this.btnProducto = new FontAwesome.Sharp.IconButton();
             this.btnSucursal = new FontAwesome.Sharp.IconButton();
@@ -54,7 +53,6 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panelMenu.Controls.Add(this.btnCliente);
-            this.panelMenu.Controls.Add(this.btnReporte);
             this.panelMenu.Controls.Add(this.btnVenta);
             this.panelMenu.Controls.Add(this.btnProducto);
             this.panelMenu.Controls.Add(this.btnSucursal);
@@ -78,7 +76,7 @@
             this.btnCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCliente.IconSize = 30;
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(0, 383);
+            this.btnCliente.Location = new System.Drawing.Point(0, 335);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(159, 48);
             this.btnCliente.TabIndex = 8;
@@ -87,28 +85,6 @@
             this.btnCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReporte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReporte.FlatAppearance.BorderSize = 0;
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.ForeColor = System.Drawing.Color.White;
-            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.FileText;
-            this.btnReporte.IconColor = System.Drawing.Color.White;
-            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReporte.IconSize = 30;
-            this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.Location = new System.Drawing.Point(0, 335);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(159, 48);
-            this.btnReporte.TabIndex = 6;
-            this.btnReporte.Text = "REPORTES";
-            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnVenta
             // 
@@ -330,7 +306,6 @@
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnEmpleado;
-        private FontAwesome.Sharp.IconButton btnReporte;
         private FontAwesome.Sharp.IconButton btnVenta;
         private FontAwesome.Sharp.IconButton btnProducto;
         private FontAwesome.Sharp.IconButton btnSucursal;

@@ -113,8 +113,9 @@ namespace CapaDatosF
         }
         public string AgregarMovimientoProducto(Movimiento_Producto movimiento)
         {
-            string query = "INSERT INTO movimiento_producto (Precio,Cantidad,SubTotal,Id_Sucursal_Producto,Id_Movimiento)" +
-              " VALUES (@Precio,@Cantidad,@SubTotal,@Id_Sucursal_Producto,@Id_Movimiento);";
+            DateTime dateTime = DateTime.Now;
+            string query = "INSERT INTO movimiento_producto (Precio,Cantidad,SubTotal,Id_Sucursal_Producto,Id_Movimiento,Fecha)" +
+              " VALUES (@Precio,@Cantidad,@SubTotal,@Id_Sucursal_Producto,@Id_Movimiento,@Date);";
 
             using (MySqlConnection connection = Conexion.prepareConnection())
             {
@@ -126,6 +127,8 @@ namespace CapaDatosF
                     command.Parameters.AddWithValue("@SubTotal", movimiento.subtotal);
                     command.Parameters.AddWithValue("@Id_Sucursal_Producto", movimiento.id_sucursal_producto);
                     command.Parameters.AddWithValue("@Id_Movimiento", movimiento.id_movimiento);
+                    command.Parameters.AddWithValue("@Date", dateTime);
+
 
                     if (connection.State == ConnectionState.Open) connection.Close();
                     connection.Open();
