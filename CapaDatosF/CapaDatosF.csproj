@@ -93,6 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassDatos.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="dCliente.cs" />
     <Compile Include="dMovimiento.cs" />
